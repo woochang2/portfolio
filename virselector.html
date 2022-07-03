@@ -1,0 +1,60 @@
+<head>
+    <title>Virtual Selector Example</title>
+    <style>
+      body {
+        counter-reset: section;
+      }
+
+      h1::before {
+        content: '###';
+      }
+
+      h2::before {
+        counter-increment: section;
+        content: "Section " counter(section) ": ";
+      }
+
+      p {
+        display: none;
+      }
+
+      div:hover p {
+        display: block;
+      }
+
+      ::selection {
+        color: red;
+        background: yellow;
+      }
+
+      .content::first-letter {
+        color: #ff0000;
+        font-size: xx-large;
+      }
+
+      .content::first-line {
+        color: #0000ff;
+        font-variant: small-caps;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <h1>Virtual Selector Example</h1>
+    <h2>HTML Tutorial</h2>
+    <h2>CSS Tutorial</h2>
+    <h2>JavaScript Tutorial</h2>
+
+    <div>Show Message - Mouse over..
+      <p><b>Note:</b>This message will show when mouse over "Show Message.."</p>
+    </div>
+    <hr>
+
+    <div class="content">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+
+  </body>
+  </html>
