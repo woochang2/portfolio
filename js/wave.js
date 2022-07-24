@@ -1,3 +1,5 @@
+import {Point} from './point.js';
+
 export class Wave {
     constructor() {
 
@@ -27,5 +29,6 @@ export class Wave {
         this.point.update()
 
         ctx.arc(this.point.x, this.point.y, 30, 0, 2 * Math.PI);
+        ctx.fill();
     }
 }
