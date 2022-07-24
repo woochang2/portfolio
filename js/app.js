@@ -8,7 +8,7 @@ class App{
 
         this.wave = new Wave();
 
-        windows.addEventListner('resize', this.resize.bind(this), false);
+        window.addEventListner('resize', this.resize.bind(this), false);
         this.resize();
 
         requestAnimationFrame(this.animate.bind(this));
